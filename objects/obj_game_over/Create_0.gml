@@ -1,0 +1,1 @@
+instance_create_depth(x + 144, y + 48, global.cfg_depth_game_over_leave_button, obj_leave_run);

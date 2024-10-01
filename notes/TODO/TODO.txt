@@ -1,0 +1,28 @@
+- finish the implementation of saving & loading (highscore, etc.)
+- display the highscores for each mode
+- fix cold starts
+- implement audio
+- rename round to turn; tround to round
+- block positioning is weird now
+- armour should reduce by percentage per round
+
+
+REBALANCES
+
+- Defensive rework??
+
+- ACCURACY / EVASION REWORK
+
+player
+accuracy = 50
+evasion = 50
+
+enemy
+accuracy = 25
+evasion = 40/60/75
+
+boss
+accuracy = 15
+evasion = 20/40/60
+
+reduce accuracy / evasion on items

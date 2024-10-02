@@ -1,10 +1,7 @@
-- finish the implementation of saving & loading (highscore, etc.)
-- display the highscores for each mode
 - fix cold starts
 - implement audio
-- rename round to turn; tround to round
 - block positioning is weird now
-- armour should reduce by percentage per round
+- armour should reduce by percentage per turn
 
 
 REBALANCES

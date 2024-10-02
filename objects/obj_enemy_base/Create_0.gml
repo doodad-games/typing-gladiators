@@ -15,6 +15,6 @@ data.evasion = floor(max(
 	data.evasion
 ) * 100) / 100;
 
-obj_tround_manager.enemy = self;
+obj_round_manager.enemy = self;
 data.current_command = "";
 data.life = data.max_life;

@@ -7,12 +7,12 @@ global.item_db = {
 			accuracy: 0.05,
 			evasion: 0.05,
 			armour: 1,
-			round_duration: 0.05,
+			turn_duration: 0.05,
 		},
 	},
 	amulet_of_nature: {
 		display_name: "Amulet of Nature",
-		stat_gain_per_tround: {
+		stat_gain_per_round: {
 			max_life: 4,
 		},
 	},
@@ -64,7 +64,7 @@ global.item_db = {
 	},
 	headhunter: {
 		display_name: "Headhunter",
-		stat_gain_per_tround: {
+		stat_gain_per_round: {
 			damage: 2,
 		},
 	},
@@ -73,7 +73,7 @@ global.item_db = {
 		stats: {
 			accuracy: 0.12,
 			evasion: 0.12,
-			round_duration: -0.06,
+			turn_duration: -0.06,
 		},
 	},
 	ring_of_life: {
@@ -98,7 +98,7 @@ global.item_db = {
 			damage: -5,
 			armour: -2,
 			regen: 4,
-			round_duration: 0.1,
+			turn_duration: 0.1,
 		},
 		cost: {
 			set_current_life_to_max: true,
@@ -107,7 +107,7 @@ global.item_db = {
 	timepiece: {
 		display_name: "Timepiece",
 		stats: {
-			round_duration: 0.25,
+			turn_duration: 0.25,
 		},
 	},
 };

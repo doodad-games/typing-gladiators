@@ -1,4 +1,4 @@
-if (obj_tround_manager.current_phase != "watch") return;
+if (obj_round_manager.current_phase != "watch") return;
 
 var _other = instance_place(x, y, all);
 if (_other == noone) return;

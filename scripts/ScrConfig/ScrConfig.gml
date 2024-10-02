@@ -68,7 +68,7 @@ global.cfg_stats = [
 	"armour",
 	"armour_disabled",
 	"regen",
-	"round_duration",
+	"turn_duration",
 ];
 global.cfg_stats_count = array_length(global.cfg_stats);
-global.cfg_tround_count = 7;
+global.cfg_round_count = 7;

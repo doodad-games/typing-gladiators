@@ -8,6 +8,6 @@ if (!have_reached_target_x){
 
 if (!have_reached_target_x) return;
 
-if (obj_tround_manager.num_pending_animations - obj_tround_manager.num_pending_blocks == 0){
+if (obj_round_manager.num_pending_animations - obj_round_manager.num_pending_blocks == 0){
 	instance_destroy();
 }

@@ -2,15 +2,15 @@ function get_play_phase_duration(){
 	var _duration = 
 		base_turn_duration
 			* turn_duration_multiplier
-			* (1 + obj_player.data.round_duration);
+			* (1 + obj_player.data.turn_duration);
 			
-	if (!is_menu_demo) _duration *= (1.01 - 0.01 * current_round);
+	if (!is_menu_demo) _duration *= (1.01 - 0.01 * current_turn);
 	
 	return max(1, _duration);
 }
 
 function start_play_phase(){
-	++current_round;
+	++current_turn;
 	current_phase = "play";
 	alarm[0] = get_play_phase_duration();
 	
@@ -53,7 +53,7 @@ function end_watch_phase(){
 	}
 	
 	if (enemy.data.life <= 0){
-		obj_run_manager.win_tround();
+		obj_run_manager.win_round();
 		return;
 	}
 	
@@ -78,7 +78,7 @@ if (instance_exists(obj_run_manager)){
 //enemy = noone;
 
 current_phase = "";
-current_round = 0;
+current_turn = 0;
 num_pending_animations = 0;
 num_pending_blocks = 0;
 

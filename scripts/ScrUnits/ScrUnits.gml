@@ -10,9 +10,9 @@ function create_stats_data(_is_for_player){
 	};
 	
 	if (_is_for_player){
-		_data.round_duration = 0;
+		_data.turn_duration = 0;
 		
-		_data.stats_gained_per_tround = {
+		_data.stats_gained_per_round = {
 			max_life: 0,
 			damage: 0,
 			accuracy: 0,
@@ -20,7 +20,7 @@ function create_stats_data(_is_for_player){
 			armour: 0,
 			armour_disabled: 0,
 			regen: 0,
-			round_duration: 0,
+			turn_duration: 0,
 		};
 	}
 	
@@ -68,7 +68,7 @@ function attack(_from, _to, _projectile){
 function do_damage(_from, _to, _projectile){
 	var _armour;
 	if (check_bool_stat(_to.data.armour_disabled)) _armour = 0;
-	else _armour = max(0, _to.data.armour - obj_tround_manager.current_round + 1);
+	else _armour = max(0, _to.data.armour - obj_round_manager.current_turn + 1);
 
 	var _amount = max(1, _from.data.damage - _armour);
 	_to.data.life -= _amount;

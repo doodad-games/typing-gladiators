@@ -1,5 +1,6 @@
-function start_new_run(_base_turn_duration){
+function start_new_run(_difficulty, _base_turn_duration){
 	instance_create_layer(0, 0, "Instances", obj_run_manager);
+	obj_run_manager.difficulty = _difficulty;
 	obj_run_manager.base_turn_duration = _base_turn_duration;
 	obj_run_manager.ready();
 }

@@ -1,7 +1,7 @@
 global.longest_stat_display_name = string_length("Armour Disabled");
 
-function frame_duration_to_display_string(_duration){
-	return round(_duration / 0.6) / 100;
+function duration_in_frames_to_display_string(_duration){
+	return string(round(_duration / 0.6) / 100) + "s";
 }
 
 function pick_random(_array){
@@ -27,8 +27,8 @@ function get_stat_description(_data, _stat, _stat_display_name, _is_pct, _with_p
 	if (!struct_exists(_data, _stat)) return "";
 	var _amount = struct_get(_data, _stat);
 	
-	if (_stat == "armour" && instance_exists(obj_tround_manager))
-		_amount = max(0, _amount - obj_tround_manager.current_round + 1);
+	if (_stat == "armour" && instance_exists(obj_round_manager))
+		_amount = max(0, _amount - obj_round_manager.current_turn + 1);
 	
 	if (_amount == 0) return "";
 
@@ -59,7 +59,7 @@ function get_full_stat_description(_data){
 	_description += get_stat_description(_data, "evasion", "Evasion", true, false);
 	_description += get_stat_description_armour(_data);
 	_description += get_stat_description(_data, "regen", "Regen", false, false);
-	_description += get_stat_description(_data, "round_duration", "Round Duration", true, true);
+	_description += get_stat_description(_data, "turn_duration", "Turn Duration", true, true);
 	
 	return _description;
 }
@@ -76,9 +76,9 @@ function get_item_description(_item_data){
 			_description += "One-off: Restore all missing life\n";
 		}
 	}
-	if (struct_exists(_item_data, "stat_gain_per_tround")){
-		_description += "Permanent stats added per tround:\n";
-		_description += get_full_stat_description(_item_data.stat_gain_per_tround);
+	if (struct_exists(_item_data, "stat_gain_per_round")){
+		_description += "Permanent stats added per round:\n";
+		_description += get_full_stat_description(_item_data.stat_gain_per_round);
 	}
 	
 	return _description;

@@ -20,4 +20,4 @@ is_going_left = false;
 
 set_is_going_left(false);
 
-++obj_tround_manager.num_pending_animations;
+++obj_round_manager.num_pending_animations;

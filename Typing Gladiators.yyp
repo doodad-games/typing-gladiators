@@ -92,6 +92,7 @@
     {"id":{"name":"obj_shop_item_slot","path":"objects/obj_shop_item_slot/obj_shop_item_slot.yy",},},
     {"id":{"name":"obj_surrender","path":"objects/obj_surrender/obj_surrender.yy",},},
     {"id":{"name":"obj_unit_base","path":"objects/obj_unit_base/obj_unit_base.yy",},},
+    {"id":{"name":"obj_version_display","path":"objects/obj_version_display/obj_version_display.yy",},},
     {"id":{"name":"obj_volume_louder","path":"objects/obj_volume_louder/obj_volume_louder.yy",},},
     {"id":{"name":"obj_volume_quieter","path":"objects/obj_volume_quieter/obj_volume_quieter.yy",},},
     {"id":{"name":"obj_volume","path":"objects/obj_volume/obj_volume.yy",},},

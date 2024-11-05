@@ -17,6 +17,7 @@ function refresh_size(){
 	window_set_size(browser_width, browser_height);
 }
 
+version = "1.0";
 last_width = -1;
 last_height = -1;
 bgm_instance = noone;

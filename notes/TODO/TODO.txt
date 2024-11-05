@@ -1,9 +1,3 @@
-- fix cold starts
-- implement audio
-- block positioning is weird now
-- armour should reduce by percentage per turn
-
-
 REBALANCES
 
 - Defensive rework??

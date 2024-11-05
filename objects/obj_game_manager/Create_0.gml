@@ -19,8 +19,11 @@ function refresh_size(){
 
 last_width = -1;
 last_height = -1;
+bgm_instance = noone;
 
 randomize();
 draw_set_font(fnt_default);
 
 room_goto(rm_menu);
+
+audio_group_load(audiogroup_music);

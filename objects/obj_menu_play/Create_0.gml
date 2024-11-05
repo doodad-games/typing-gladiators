@@ -7,3 +7,5 @@ function handle_press(){
 		obj_difficulty_manager.selected_turn_duration
 	);
 }
+
+click_sound = snd_start_run;

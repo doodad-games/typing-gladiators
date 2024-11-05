@@ -8,6 +8,9 @@ data_types = {
 	high_score_custom_farthest_highscore: 0,
 	high_score_custom_fastest_base_turn_duration: 0,
 	high_score_custom_farthest_base_turn_duration: 0,
+	volume_master: 0.75,
+	volume_music: 0.75,
+	volume_sfx: 0.75,
 };
 data_type_keys = struct_get_names(data_types);
 data_type_keys_length = array_length(data_type_keys);
@@ -19,6 +22,15 @@ function get_highscore(_difficulty){
 function save_highscore(_difficulty, _highscore){
 	variable_instance_set(id, "high_score_" + _difficulty + "_highscore", _highscore);
 	write_save();
+}
+
+function get_volume(_type){
+	return variable_instance_get(id, "volume_" + _type);
+}
+
+function set_volume(_type, _volume){
+	variable_instance_set(id, "volume_" + _type, _volume);
+	alarm[0] = 15;
 }
 
 function write_save(){

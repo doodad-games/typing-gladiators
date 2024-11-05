@@ -1,0 +1,1 @@
+--obj_round_manager.num_pending_animations;

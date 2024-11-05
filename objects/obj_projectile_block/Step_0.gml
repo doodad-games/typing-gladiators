@@ -1,7 +1,10 @@
 event_inherited();
 
-if (!have_reached_target_x){
-	if (abs(target_x - x) > 10) return;
+if (!obj_round_manager.is_menu_demo && !have_reached_target_x){
+	if (
+		(is_going_left && x > target_x) ||
+		(!is_going_left && x < target_x)
+	) return;
 	have_reached_target_x = true;
 	speed = 0;
 }

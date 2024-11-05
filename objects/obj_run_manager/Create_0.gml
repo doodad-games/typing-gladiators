@@ -47,6 +47,7 @@ function start_current_round(){
 }
 
 function win_round(){
+	audio_play_sound(snd_enemy_die, 50, false);
 	goto_shop();
 }
 

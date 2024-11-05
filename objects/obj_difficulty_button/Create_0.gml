@@ -1,3 +1,5 @@
+event_inherited();
+
 function handle_press(){
 	obj_difficulty_manager.selected_difficulty = difficulty;
 	obj_difficulty_manager.selected_turn_duration = base_turn_duration;

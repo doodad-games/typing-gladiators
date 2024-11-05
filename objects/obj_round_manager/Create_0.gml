@@ -19,6 +19,8 @@ function start_play_phase(){
 	if (!is_menu_demo){
 		enemy.data.current_command = generate_enemy_command();
 		heal(enemy, enemy.data.regen);
+		
+		audio_play_sound(snd_start_play_phase, 50, false);
 	}
 }
 
@@ -29,6 +31,8 @@ function end_play_phase(){
 	if (!is_menu_demo) {
 		enemy.data.current_command = string_trim(enemy.data.current_command);
 		execute_command(enemy);
+		
+		audio_play_sound(snd_end_play_phase, 50, false);
 	}
 
 	start_watch_phase();
@@ -64,6 +68,11 @@ function set_game_over(){
 	current_phase = "game_over";
 	if (instance_exists(obj_game_over)) return;
 	instance_create_depth(room_width * 0.5, room_height * 0.5, global.cfg_depth_game_over, obj_game_over);
+	
+	var _sound;
+	if (obj_run_manager.did_beat_highscore) _sound = snd_lose_run_highscore;
+	else _sound = snd_lose_run;
+	audio_play_sound(_sound, 50, false);
 }
 
 if (instance_exists(obj_run_manager)){

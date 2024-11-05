@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_extradimensional_portalhopping",
+  "audioGroupId":{
+    "name":"audiogroup_music",
+    "path":"audiogroups/audiogroup_music",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":79.491295,
+  "name":"snd_extradimensional_portalhopping",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_extradimensional_portalhopping.wav",
+  "type":0,
+  "volume":0.5,
+}

@@ -59,21 +59,32 @@ function attack(_from, _to, _projectile){
 	var _hit_chance = 1 + _from.data.accuracy - _to.data.evasion;
 	if (_hit_chance < 1 && random(1) > _hit_chance){
 		create_fct(_projectile, "MISS");
+		audio_play_sound(snd_evade_hit, 100, false);
 		return;
 	}
 	
 	do_damage(_from, _to, _projectile);
 }
 
+function get_effective_armour(_armour){
+	return max(0, floor(_armour * (1.05 - obj_round_manager.current_turn * 0.05)));
+}
+
 function do_damage(_from, _to, _projectile){
 	var _armour;
 	if (check_bool_stat(_to.data.armour_disabled)) _armour = 0;
-	else _armour = max(0, _to.data.armour - obj_round_manager.current_turn + 1);
+	else _armour = get_effective_armour(_to.data.armour);
 
 	var _amount = max(1, _from.data.damage - _armour);
 	_to.data.life -= _amount;
 	
 	create_fct(_projectile, "-" + string(_amount));
+	
+	var _sound;
+	if (_amount <= 3) _sound = snd_receive_hit_high_armour;
+	else if (_to.object_index == obj_player) _sound = snd_receive_hit_player;
+	else _sound = snd_receive_hit_enemy;
+	audio_play_sound(_sound, 100, false);
 }
 
 function draw_common_unit(){

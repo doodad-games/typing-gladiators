@@ -28,7 +28,7 @@ function get_stat_description(_data, _stat, _stat_display_name, _is_pct, _with_p
 	var _amount = struct_get(_data, _stat);
 	
 	if (_stat == "armour" && instance_exists(obj_round_manager))
-		_amount = max(0, _amount - obj_round_manager.current_turn + 1);
+		_amount = get_effective_armour(_amount);
 	
 	if (_amount == 0) return "";
 

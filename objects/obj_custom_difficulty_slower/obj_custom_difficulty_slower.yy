@@ -12,8 +12,8 @@
     "path":"folders/Objects.yy",
   },
   "parentObjectId":{
-    "name":"obj_button_base",
-    "path":"objects/obj_button_base/obj_button_base.yy",
+    "name":"obj_button_base_holdable",
+    "path":"objects/obj_button_base_holdable/obj_button_base_holdable.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
